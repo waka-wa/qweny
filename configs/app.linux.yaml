@@ -1,0 +1,14 @@
+window:
+  left: 100
+  top: 100
+  width: 765
+  height: 503
+fps: 2.0
+model:
+  backend: "ollama"
+  url: "http://localhost:11434/api/generate"
+  model_name: "qwen2.5-vl"
+  headers: {}
+plugin_enabled: false
+rag_enabled: false
+log_dir: null

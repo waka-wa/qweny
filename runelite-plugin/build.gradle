@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example.qposrs'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.runelite.net' }
+}
+
+dependencies {
+    implementation 'net.runelite:client:1.10.22'
+    implementation 'org.zeromq:jeromq:0.5.3'
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+jar {
+    from sourceSets.main.output
+    manifest {
+        attributes(
+            'Implementation-Title': 'QwenPlaysOSRS',
+            'Implementation-Version': version
+        )
+    }
+}
